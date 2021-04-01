@@ -9,33 +9,55 @@
 <html>
 	<head>
 	<link rel="stylesheet" href="site.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	</head>
 
 	<body>
-		<label for="start"></label>
-		<label for ="today"></label>
-		<input class="chart" type="date" id="start" name="trip-start">
-		<script id="today"> var today = new Date();
-				var dd = String(today.getDate()).padStart(2, '0');
-				var mm = String(today.getMonth() +1).padStart(2, '0'); //January is 0//
+		<label for></label>
+		<label for></label>
+		<p class="title"> How Many Days Left Until Christmas</p>
+		<p class="Christmas">12/25/2021</p>
+		<script>
+		var start = new Date();
+		start.setDate(25);
+		start.setMonth(11);
+		start.setFullYear(2021);
+		document.getElementById("demo").innerHTML = start;
+		
+		</script>
+		<script>
+				var today = new Date();
+				var dd = today.getDate();
+				
+				var mm = tpday.getMonth()+1;
 				var yyyy = today.getFullYear();
-				today = mm+'/'+dd+'/' + yyyy;
-				document.write(today);
+				if (dd<10)
+				{
+					dd='0' +dd;
+				}
+				if(mm<10) 
+				{
+					mm='0'+mm;
+				}
+				today = mm+'/'+dd+'/'+yyyy;
 				
 		</script>
 				<button class="button" onclick="myFunction()">Find Difference</button>
 		<script>
-			const date1 = new Date(document.getElementById("start"));
-			const date2 = new Date(document.getElementById("today"));
+			const date1 = new Date(getElementById("start"));
+			const date2 = new Date(getElementById("today"));
 			const diffTime = Math.abs(date2 - date1);
 			const diffDays = Math.ceil(diffTime / (1000*60*60*24));
 			console.log(diffTime + " milliseconds");
 			console.log(diffDays + "days");
 			function myFunction() {
-				alert(diffDays&&diffTime);
+				alert((start-today)/1000/60/60/24+" Days Until Chritmas");
 				}
 		</script>
-		
+		<img class="left" src="pngtree-winter-snowflake-beautiful-snowflake-hand-drawn-snowflakes-cartoon-snowflake-png-image_414741.jpg">
+		<img class="right"  src="pngtree-winter-snowflake-beautiful-snowflake-hand-drawn-snowflakes-cartoon-snowflake-png-image_414741.jpg">
 			<script type="text/javascript" src="script.js"></script>	
 	</body>
 
