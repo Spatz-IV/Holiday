@@ -9,6 +9,7 @@
 <html>
 	<head>
 	<link rel="stylesheet" href="site.css">
+<<<<<<< HEAD
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -42,22 +43,48 @@
 					mm='0'+mm;
 				}
 				today = mm+'/'+dd+'/'+yyyy;
+=======
+	</head>
+
+	<body>
+		<label for="start"></label>
+		<label for ="today"></label>
+		<input class="chart" type="date" id="start" name="trip-start">
+		<script id="today"> var today = new Date();
+				var dd = String(today.getDate()).padStart(2, '0');
+				var mm = String(today.getMonth() +1).padStart(2, '0'); //January is 0//
+				var yyyy = today.getFullYear();
+				today = mm+'/'+dd+'/' + yyyy;
+				document.write(today);
+>>>>>>> 7de21b62b4448260cd56c7c9a08a5bec150ffc80
 				
 		</script>
 				<button class="button" onclick="myFunction()">Find Difference</button>
 		<script>
+<<<<<<< HEAD
 			const date1 = new Date(getElementById("start"));
 			const date2 = new Date(getElementById("today"));
+=======
+			const date1 = new Date(document.getElementById("start"));
+			const date2 = new Date(document.getElementById("today"));
+>>>>>>> 7de21b62b4448260cd56c7c9a08a5bec150ffc80
 			const diffTime = Math.abs(date2 - date1);
 			const diffDays = Math.ceil(diffTime / (1000*60*60*24));
 			console.log(diffTime + " milliseconds");
 			console.log(diffDays + "days");
 			function myFunction() {
+<<<<<<< HEAD
 				alert((start-today)/1000/60/60/24+" Days Until Chritmas");
 				}
 		</script>
 		<img class="left" src="pngtree-winter-snowflake-beautiful-snowflake-hand-drawn-snowflakes-cartoon-snowflake-png-image_414741.jpg">
 		<img class="right"  src="pngtree-winter-snowflake-beautiful-snowflake-hand-drawn-snowflakes-cartoon-snowflake-png-image_414741.jpg">
+=======
+				alert(diffDays&&diffTime);
+				}
+		</script>
+		
+>>>>>>> 7de21b62b4448260cd56c7c9a08a5bec150ffc80
 			<script type="text/javascript" src="script.js"></script>	
 	</body>
 
